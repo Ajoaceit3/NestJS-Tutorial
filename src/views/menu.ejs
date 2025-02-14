@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Menú</title>
+</head>
+<body>
+    <h1>Menú</h1>
+    <ul>
+        <% menu.forEach(item => { %>
+            <% if (item === 'Introducción') { %>
+                <li><a href="/intro"><%= item %></a></li> 
+            <% } else if (item === 'Características del Framework') { %>
+                    <li><a href="/properties"><%= item %></a></li>
+            <% } else if (item === 'Ventajas e Inconvenientes') { %>
+                <li><a href="/pros_cons"><%= item %></a></li>
+            <% } else if (item === 'Integraciones Populares') { %>
+                    <li><a href="/integrations"><%= item %></a></li>
+            <% } else if (item === 'Instalación') { %>
+                    <li><a href="/install"><%= item %></a></li>
+            <% } else if (item === 'Recursos Adicionales') { %>
+                    <li><a href="/extrainfo"><%= item %></a></li>
+            <% } else if (item === 'Conclusión') { %>
+                    <li><a href="/conclusion"><%= item %></a></li>
+            <% } else { %>
+                <li><%= item %></li>
+            <% } %>
+        <% }) %>
+    </ul>
+</body>
+</html>
